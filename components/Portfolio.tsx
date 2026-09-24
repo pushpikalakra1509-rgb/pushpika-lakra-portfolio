@@ -299,7 +299,7 @@ function Hero() {
         >
           <Image
             className="portrait"
-            src="/pushpika-portrait.png"
+            src="/pushpika-lakra-portfolio/pushpika-portrait.png"
             alt="Pushpika Lakra"
             fill
             priority
