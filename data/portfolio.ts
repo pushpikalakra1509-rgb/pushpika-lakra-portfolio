@@ -47,7 +47,7 @@ export const achievements = [
     title: "Organising Head — Science Association",
     description:
       "Led and coordinated the organising team for my college Science Association, developing experience in team management, communication and event coordination.",
-    file: "/certificates/leadership-certificate.pdf",
+    file: "/pushpika-lakra-portfolio/certificates/leadership-certificate.pdf",
   },
 
   {
@@ -56,19 +56,79 @@ export const achievements = [
     title: "3-Month Internship Experience",
     description:
       "Worked with a team on a college project that resulted in a formal three-month internship recognition from the college.",
-    file: "/certificates/Certificate of Appreciation.pdf",
+    file: "/pushpika-lakra-portfolio/certificates/Certificate of Appreciation.pdf",
   },
 ];
 
 export const certifications = [
-  { category: "FEATURED", title: "AI–Machine Learning Engineer Foundation Course", issuer: "Reliance Foundation Skilling Academy / Skill India Digital", detail: "120 hours", file: "/certificates/ai-ml-foundation.pdf" },
-  { category: "AI", title: "Getting Started with Generative AI", issuer: "IBM SkillsBuild", detail: "September 2026", file: "/certificates/generative-ai-ibm-skillsbuild.pdf" },
-  { category: "AI", title: "Create Image Captioning Models", issuer: "Completed", detail: "September 2026", file: "/certificates/create-image-captioning-models.pdf" },
-  { category: "DATA", title: "Power BI for Beginners", issuer: "Completed", detail: "September 2026", file: "/certificates/power-bi-for-beginners.pdf" },
-  { category: "RESEARCH", title: "Research Methodology for Computer Science", issuer: "Christ College, Pune", detail: "30 hours", file: "/certificates/research-methodology.png" },
-  { category: "JAVA", title: "Red Hat Application Development I: Java EE", issuer: "Red Hat", detail: "32 credit hours · January 2026", file: "/certificates/java-ee-red-hat.pdf" },
-  { category: "PRO", title: "Business Email", issuer: "HP LIFE", detail: "September 2026", file: "/certificates/business-email-hp-life.pdf" },
-  { category: "DESIGN", title: "Graphic Design Essentials", issuer: "Training", detail: "September 2026 · 45-minute training", file: "/certificates/graphic-design-essentials.pdf" },
-  { category: "DESIGN", title: "Meet Canva's Visual Suite", issuer: "Training", detail: "September 2026 · 1-hour training", file: "/certificates/canva-visual-suite.pdf" },
-  { category: "FOUNDATION", title: "C Programming & Code Reading Internship", issuer: "Evolvability Tech Pvt. Ltd.", detail: "40 hours · 2024", file: "/certificates/c-programming-code-reading-internship.png" },
+  {
+    category: "FEATURED",
+    title: "AI–Machine Learning Engineer Foundation Course",
+    issuer: "Reliance Foundation Skilling Academy / Skill India Digital",
+    detail: "120 hours",
+    file: "/pushpika-lakra-portfolio/certificates/ai-ml-foundation.pdf",
+  },
+  {
+    category: "AI",
+    title: "Getting Started with Generative AI",
+    issuer: "IBM SkillsBuild",
+    detail: "September 2026",
+    file: "/pushpika-lakra-portfolio/certificates/generative-ai-ibm-skillsbuild.pdf",
+  },
+  {
+    category: "AI",
+    title: "Create Image Captioning Models",
+    issuer: "Completed",
+    detail: "September 2026",
+    file: "/pushpika-lakra-portfolio/certificates/create-image-captioning-models.pdf",
+  },
+  {
+    category: "DATA",
+    title: "Power BI for Beginners",
+    issuer: "Completed",
+    detail: "September 2026",
+    file: "/pushpika-lakra-portfolio/certificates/power-bi-for-beginners.pdf",
+  },
+  {
+    category: "RESEARCH",
+    title: "Research Methodology for Computer Science",
+    issuer: "Christ College, Pune",
+    detail: "30 hours",
+    file: "/pushpika-lakra-portfolio/certificates/research-methodology.png",
+  },
+  {
+    category: "JAVA",
+    title: "Red Hat Application Development I: Java EE",
+    issuer: "Red Hat",
+    detail: "32 credit hours · January 2026",
+    file: "/pushpika-lakra-portfolio/certificates/java-ee-red-hat.pdf",
+  },
+  {
+    category: "PRO",
+    title: "Business Email",
+    issuer: "HP LIFE",
+    detail: "September 2026",
+    file: "/pushpika-lakra-portfolio/certificates/business-email-hp-life.pdf",
+  },
+  {
+    category: "DESIGN",
+    title: "Graphic Design Essentials",
+    issuer: "Training",
+    detail: "September 2026 · 45-minute training",
+    file: "/pushpika-lakra-portfolio/certificates/graphic-design-essentials.pdf",
+  },
+  {
+    category: "DESIGN",
+    title: "Meet Canva's Visual Suite",
+    issuer: "Training",
+    detail: "September 2026 · 1-hour training",
+    file: "/pushpika-lakra-portfolio/certificates/canva-visual-suite.pdf",
+  },
+  {
+    category: "FOUNDATION",
+    title: "C Programming & Code Reading Internship",
+    issuer: "Evolvability Tech Pvt. Ltd.",
+    detail: "40 hours · 2024",
+    file: "/pushpika-lakra-portfolio/certificates/c-programming-code-reading-internship.png",
+  },
 ];
