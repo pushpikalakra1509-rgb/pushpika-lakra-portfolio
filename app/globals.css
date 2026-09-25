@@ -118,13 +118,8 @@ min-height:680px;
 overflow:hidden
 }
 
-.hero-gridline{
-position:absolute;
-top:18%;
-left:7vw;
-right:7vw;
-height:1px;
-background:linear-gradient(90deg,var(--line),transparent)
+.hero-gridline {
+  display: none;
 }
 
 .hero-copy{
@@ -224,15 +219,8 @@ linear-gradient(180deg,transparent 48%,rgba(0,0,0,.7)),
 linear-gradient(90deg,rgba(6,7,8,.24),transparent 35%,rgba(39,199,192,.06))
 }
 
-.portrait-scan{
-position:absolute;
-left:0;
-right:0;
-top:-20%;
-height:1px;
-background:linear-gradient(90deg,transparent,var(--teal),transparent);
-box-shadow:0 0 20px rgba(39,199,192,.55);
-animation:scan 5s ease-in-out infinite
+.portrait-scan {
+  display: none;
 }
 
 .portrait-label{
