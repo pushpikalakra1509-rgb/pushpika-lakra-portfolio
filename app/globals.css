@@ -2675,3 +2675,83 @@ min-height:360px
   opacity: 0.65;
   transform: translateY(-2px);
 }
+/* REMOVE HERO PORTRAIT GRID / SCAN LINES */
+.hero-gridline,
+.portrait-scan {
+  display: none !important;
+}
+
+/* =========================================
+   REMOVE ALL HERO / NAV GRID LINES
+   ========================================= */
+
+.nav,
+.nav.scrolled {
+  border-bottom: none !important;
+}
+
+.hero-gridline,
+.portrait-scan,
+.hero-stage::before,
+.hero-stage::after,
+.portrait-scene::before,
+.portrait-scene::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   HERO — FINAL POLISH
+   ========================================= */
+
+.hero-static-section .hero-copy {
+  transform: translateY(-2px);
+}
+
+.hero-static-section .hero-title {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-static-section .static-portrait-frame {
+  border: 1px solid rgba(242, 243, 239, 0.12);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(39, 199, 192, 0.025);
+}
+
+.hero-static-section .static-portrait-frame .portrait {
+  transform: scale(1.008);
+}
+
+.hero-static-section .hero-meta {
+  align-items: center;
+}
+
+.hero-static-section .hero-meta span:first-child {
+  opacity: 0.72;
+}
+
+.hero-static-section .hero-meta span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.hero-static-section .hero-meta span:last-child::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 12px rgba(39, 199, 192, 0.65);
+}
+
+@media (max-width: 560px) {
+  .hero-static-section .static-portrait-frame {
+    border-color: rgba(242, 243, 239, 0.1);
+  }
+}
