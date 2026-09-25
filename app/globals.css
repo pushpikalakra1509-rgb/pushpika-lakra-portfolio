@@ -2755,3 +2755,30 @@ min-height:360px
     border-color: rgba(242, 243, 239, 0.1);
   }
 }
+
+/* =========================================
+   HERO — PORTRAIT SCALE
+   ========================================= */
+
+.hero-static-section .static-portrait-frame {
+  right: 7vw;
+  width: min(42vw, 560px);
+  height: 70vh;
+}
+
+@media (max-width: 900px) {
+  .hero-static-section .static-portrait-frame {
+    right: 6vw;
+    width: 70vw;
+    height: 54vh;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-static-section .static-portrait-frame {
+    right: 8vw;
+    width: 72vw;
+    height: 39vh;
+    min-height: 280px;
+  }
+}
