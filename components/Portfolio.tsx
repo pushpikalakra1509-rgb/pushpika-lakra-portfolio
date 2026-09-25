@@ -100,17 +100,25 @@ function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
+useEffect(() => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (
+      event.key.toLowerCase() === "p" &&
+      event.target instanceof HTMLElement &&
+      !["INPUT", "TEXTAREA"].includes(event.target.tagName)
+    ) {
+      document
+        .getElementById("ask-pushpika")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-    onScroll();
+  window.addEventListener("keydown", handleKeyDown);
 
-    window.addEventListener("scroll", onScroll, {
-      passive: true,
-    });
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, []);
 
   return (
     <header className={`nav ${scrolled ? "scrolled" : ""}`}>
@@ -408,9 +416,19 @@ function About() {
       >
         CURIOUS
       </div>
+      <a
+        href="/pushpika-lakra-portfolio/resume/Pushpika-Lakra-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-button"
+      >
+        DOWNLOAD CV ↗
+      </a>
     </section>
+    
   );
 }
+
 function Education() {
   return (
     <section className="section education-section" id="education">
@@ -1000,14 +1018,121 @@ function AskPushpika() {
     .replace(/[?!.,]/g, "")
     .replace(/\s+/g, " ");
 
-  const matchIndex = questions.findIndex((item) =>
+  const aliases = [
+    {
+      match: ["who is pushpika", "tell me about pushpika", "about pushpika"],
+      index: 0,
+    },
+    {
+      match: [
+        "education",
+        "where did she study",
+        "where does she study",
+        "academic background",
+        "qualification",
+      ],
+      index: 1,
+    },
+    {
+      match: [
+        "citypulse",
+        "what did she build",
+        "what projects",
+        "her project",
+        "projects",
+      ],
+      index: 2,
+    },
+    {
+      match: [
+        "skills",
+        "what does she know",
+        "what can she do",
+        "technologies",
+        "tech stack",
+        "technical abilities",
+      ],
+      index: 3,
+    },
+    {
+      match: [
+        "soft skills",
+        "how does she work",
+        "strengths",
+        "personal skills",
+      ],
+      index: 4,
+    },
+    {
+      match: [
+        "leadership",
+        "leader",
+        "organising",
+        "organizing",
+        "science association",
+      ],
+      index: 5,
+    },
+    {
+      match: [
+        "experience",
+        "internship",
+        "work experience",
+        "practical experience",
+      ],
+      index: 6,
+    },
+    {
+      match: [
+        "certifications",
+        "certificates",
+        "courses",
+        "training",
+      ],
+      index: 7,
+    },
+    {
+      match: [
+        "interests",
+        "what is she learning",
+        "what is she exploring",
+        "what is she working toward",
+      ],
+      index: 8,
+    },
+    {
+      match: [
+        "contact",
+        "email",
+        "linkedin",
+        "github",
+        "how can i reach her",
+        "how do i contact her",
+      ],
+      index: 9,
+    },
+  ];
+
+  const aliasMatch = aliases.find((group) =>
+    group.match.some((phrase) =>
+      normalizedQuery.includes(phrase)
+    )
+  );
+
+  if (aliasMatch) {
+    setActiveQuestion(aliasMatch.index);
+    setInput("");
+    return;
+  }
+
+  const keywordMatch = questions.findIndex((item) =>
     item.keywords.some((keyword) =>
       normalizedQuery.includes(keyword.toLowerCase())
     )
   );
 
-  if (matchIndex !== -1) {
-    setActiveQuestion(matchIndex);
+  if (keywordMatch !== -1) {
+    setActiveQuestion(keywordMatch);
   }
 
   setInput("");
