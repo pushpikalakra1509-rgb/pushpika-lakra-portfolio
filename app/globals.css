@@ -1407,3 +1407,1222 @@ min-height:360px
     font-size: clamp(62px, 20vw, 100px) !important;
   }
 }
+/* =========================
+   EDUCATION
+   ========================= */
+
+.education-section {
+  padding-top: 160px;
+  background: linear-gradient(180deg, #070809, #060708);
+}
+
+.education-list {
+  margin-top: 90px;
+  border-top: 1px solid var(--line);
+}
+
+.education-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 260px;
+  gap: 30px;
+  padding: 45px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+  transition: 0.35s ease;
+}
+
+.education-row:hover {
+  padding-left: 18px;
+  background: linear-gradient(
+    90deg,
+    rgba(39, 199, 192, 0.06),
+    transparent
+  );
+}
+
+.education-number {
+  font: 9px var(--mono);
+  color: var(--faint);
+  padding-top: 8px;
+}
+
+.education-main .micro {
+  color: var(--teal);
+  font-size: 8px;
+  margin-bottom: 14px;
+}
+
+.education-main h3 {
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.education-main h4 {
+  font-family: var(--serif);
+  font-size: clamp(25px, 3vw, 42px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--teal);
+  margin: 0 0 24px;
+}
+
+.education-main > p:not(.micro) {
+  font-size: 15px;
+  color: var(--paper);
+  margin: 0 0 8px;
+}
+
+.education-main small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.education-detail {
+  font: 9px var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 8px;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+   ========================= */
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: min(480px, 45vw);
+}
+
+.social-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.social-item > span {
+  font: 9px var(--mono);
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+
+.social-item a {
+  font: 11px var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  border-bottom: 0;
+  padding-bottom: 0;
+  transition: 0.25s ease;
+  word-break: break-word;
+}
+
+.social-item a:hover {
+  color: var(--teal);
+}
+
+
+/* =========================
+   EDUCATION + CONTACT MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+  .education-row {
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+    padding: 35px 0;
+  }
+
+  .education-detail {
+    grid-column: 2;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .socials {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .education-row {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+  }
+
+  .education-main h3 {
+    font-size: 34px;
+  }
+
+  .education-main h4 {
+    font-size: 25px;
+  }
+
+  .social-item {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .social-item a {
+    font-size: 10px;
+  }
+}
+/* =========================
+   MOBILE HERO FIX
+   ========================= */
+
+@media (max-width: 560px) {
+
+  /* Give the text its own space */
+  .hero-static-section .hero-copy {
+    top: 13vh;
+    left: 6vw;
+    width: 88vw;
+  }
+
+  /* Slightly smaller hero title */
+  .hero-static-section .hero-title {
+    font-size: clamp(58px, 18vw, 88px) !important;
+    line-height: 0.82 !important;
+  }
+
+  /* Keep the intro compact */
+  .hero-static-section .hero-intro {
+    font-size: 19px;
+    line-height: 1.15;
+    margin-top: 28px;
+    max-width: 88vw;
+  }
+
+  /* Keep the degree/status line ABOVE the photo */
+  .hero-static-section .hero-detail {
+    font-size: 10px;
+    line-height: 1.6;
+    max-width: 82vw;
+    margin-top: 14px;
+  }
+
+  /* Smaller portrait + move it lower */
+  .hero-static-section .static-portrait-frame {
+    top: 54vh;
+    right: 8vw;
+    width: 76vw;
+    height: 42vh;
+    min-height: 300px;
+  }
+}
+/* =========================================
+   ASK PUSHPIKA
+   ========================================= */
+
+.ask-pushpika {
+  position: relative;
+  min-height: 90vh;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+  overflow: hidden;
+}
+
+.ask-pushpika::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  right: -10%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(84, 220, 205, 0.12) 0%,
+    rgba(84, 220, 205, 0.04) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ask-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8vw;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.ask-pushpika h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(70px, 9vw, 150px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+}
+
+.ask-pushpika h2 span {
+  color: var(--teal);
+}
+
+.ask-intro {
+  max-width: 390px;
+  margin-top: 38px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Assistant card */
+
+.ask-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ask-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.ask-card-top span:last-child {
+  color: var(--teal);
+}
+
+/* Answer */
+
+.ask-answer {
+  padding: 40px 0;
+}
+
+.ask-label {
+  margin-bottom: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+}
+
+.ask-answer > p:last-child {
+  max-width: 650px;
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+/* Questions */
+
+.ask-questions {
+  display: grid;
+  gap: 8px;
+}
+
+.ask-questions button {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ask-questions button span {
+  color: var(--teal);
+  min-width: 24px;
+}
+
+.ask-questions button:hover {
+  color: var(--paper);
+  border-color: var(--teal);
+  background: rgba(84, 220, 205, 0.04);
+  transform: translateX(5px);
+}
+
+.ask-questions button.active {
+  color: var(--paper);
+  border-color: rgba(84, 220, 205, 0.55);
+  background: rgba(84, 220, 205, 0.06);
+}
+
+
+/* =========================================
+   ASK PUSHPIKA — MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+  .ask-pushpika {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .ask-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 55px;
+  }
+
+  .ask-pushpika h2 {
+    font-size: clamp(70px, 20vw, 110px);
+  }
+
+  .ask-intro {
+    margin-top: 28px;
+  }
+
+  .ask-card {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .ask-answer {
+    padding: 30px 0;
+  }
+
+  .ask-answer > p:last-child {
+    font-size: 18px;
+  }
+
+  .ask-questions button {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 560px) {
+  .ask-pushpika {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .ask-pushpika h2 {
+    font-size: clamp(64px, 21vw, 95px);
+  }
+
+  .ask-card-top {
+    font-size: 8px;
+  }
+
+  .ask-questions button {
+    padding: 13px 12px;
+  }
+}
+/* =========================================
+   CONTACT ACTION
+   ========================================= */
+
+.contact-message {
+  max-width: 460px;
+}
+
+.contact-message > p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.contact-email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 22px;
+
+  border: 1px solid var(--teal);
+  color: var(--paper);
+  background: transparent;
+
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contact-email-button:hover {
+  background: var(--teal);
+  color: var(--bg);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+  .contact-message {
+    margin-bottom: 45px;
+  }
+
+  .contact-email-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* =========================================
+   ASK PUSHPIKA — CHAT INPUT
+   ========================================= */
+
+.ask-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.ask-input-row input {
+  flex: 1;
+  min-width: 0;
+
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+
+  color: var(--paper);
+
+  padding: 15px 16px;
+
+  outline: none;
+
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.ask-input-row input::placeholder {
+  color: var(--muted);
+}
+
+.ask-input-row input:focus {
+  border-color: rgba(84, 220, 205, 0.6);
+}
+
+.ask-input-row button {
+  border: 1px solid var(--teal);
+  background: var(--teal);
+  color: var(--bg);
+
+  padding: 0 20px;
+
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.ask-input-row button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.ask-user-question {
+  color: var(--muted) !important;
+  font-family: var(--mono);
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+}
+
+.ask-response {
+  margin-top: 0 !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .ask-input-row {
+    flex-direction: column;
+  }
+
+  .ask-input-row button {
+    min-height: 46px;
+  }
+}
+
+/* =========================================
+   HOW I BUILT THIS
+   ========================================= */
+
+.build-section {
+  position: relative;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+  overflow: hidden;
+}
+
+.build-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8vw;
+  align-items: end;
+  margin-top: 70px;
+}
+
+.build-heading h2 {
+  margin: 20px 0 0;
+
+  font-family: var(--serif);
+  font-size: clamp(70px, 9vw, 145px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+}
+
+.build-heading h2 span {
+  color: var(--teal);
+}
+
+.build-intro {
+  max-width: 390px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-bottom: 8px;
+}
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 90px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.build-card {
+  position: relative;
+  min-height: 260px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.build-card:hover {
+  background: rgba(84, 220, 205, 0.035);
+  transform: translateY(-4px);
+}
+
+.build-number {
+  display: block;
+
+  color: var(--teal);
+
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.build-card h3 {
+  margin-top: 70px;
+
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.build-card p {
+  max-width: 300px;
+  margin-top: 18px;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.build-stack {
+  margin-top: 45px;
+  padding-top: 25px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.build-stack > span {
+  color: var(--teal);
+
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.build-stack > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.build-stack b {
+  padding: 8px 11px;
+
+  border: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .build-heading {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 55px;
+  }
+
+  .build-heading h2 {
+    font-size: clamp(65px, 19vw, 105px);
+  }
+
+  .build-grid {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+
+  .build-card {
+    min-height: 220px;
+  }
+
+  .build-card h3 {
+    margin-top: 45px;
+  }
+
+  .build-stack {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+/* =========================================
+   FLOATING ASK PUSHPIKA BUTTON
+   ========================================= */
+
+.floating-ask-button {
+  position: fixed;
+  z-index: 1000;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  border: 1px solid rgba(84, 220, 205, 0.55);
+
+  background: rgba(10, 12, 13, 0.82);
+  backdrop-filter: blur(12px);
+
+  color: var(--paper);
+
+  text-decoration: none;
+
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.floating-ask-button span {
+  color: var(--teal);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.floating-ask-button:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--bg);
+  transform: translateY(-3px);
+}
+
+.floating-ask-button:hover span {
+  color: var(--bg);
+}
+
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .floating-ask-button {
+    right: 14px;
+    bottom: 14px;
+
+    padding: 12px 14px;
+
+    font-size: 8px;
+  }
+}
+/* =========================================
+   LEAVE A SIGNAL / DIRECT CHANNEL
+   ========================================= */
+
+.contact-bottom {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 7vw;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.contact-message {
+  max-width: 520px;
+}
+
+.contact-message > p {
+  max-width: 470px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 0 0 30px;
+}
+
+.signal-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 42px;
+  color: var(--paper);
+  font: 9px var(--mono);
+  letter-spacing: 0.12em;
+}
+
+.signal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 14px rgba(39, 199, 192, 0.7);
+  animation: signalPulse 1.8s ease-in-out infinite;
+}
+
+.signal-form {
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(39, 199, 192, 0.07),
+      transparent 38%
+    ),
+    rgba(255, 255, 255, 0.018);
+  min-height: 470px;
+}
+
+.signal-form::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+}
+
+.signal-form-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid var(--line);
+
+  color: var(--muted);
+  font: 8px var(--mono);
+  letter-spacing: 0.14em;
+}
+
+.signal-form-top span:last-child {
+  color: var(--teal);
+}
+
+.signal-field {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
+
+.signal-field label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--muted);
+  font: 8px var(--mono);
+  letter-spacing: 0.14em;
+}
+
+.signal-field input,
+.signal-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 0;
+  border-bottom: 1px solid var(--line);
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--paper);
+
+  font-family: var(--serif);
+  font-size: 17px;
+
+  padding: 9px 0 12px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.signal-field input::placeholder,
+.signal-field textarea::placeholder {
+  color: var(--faint);
+}
+
+.signal-field input:focus,
+.signal-field textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 1px 0 var(--teal);
+}
+
+.signal-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.signal-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.signal-reasons button {
+  appearance: none;
+
+  border: 1px solid var(--line);
+  background: transparent;
+
+  color: var(--muted);
+
+  padding: 9px 11px;
+
+  font: 8px var(--mono);
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.signal-reasons button:hover {
+  color: var(--paper);
+  border-color: var(--teal);
+}
+
+.signal-reasons button.active {
+  color: var(--bg);
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.signal-submit {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 3px;
+
+  border: 1px solid var(--teal);
+  background: var(--teal);
+
+  color: var(--bg);
+
+  padding: 14px 19px;
+
+  font: 9px var(--mono);
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.signal-submit:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  color: var(--teal);
+}
+
+.signal-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.signal-progress {
+  position: relative;
+  z-index: 2;
+
+  height: 1px;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  background: var(--line);
+}
+
+.signal-progress span {
+  display: block;
+  width: 45%;
+  height: 100%;
+
+  background: var(--teal);
+
+  animation: signalTransmit 1.8s ease-in-out forwards;
+}
+
+.signal-success {
+  position: relative;
+  z-index: 2;
+
+  min-height: 410px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.signal-success-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--teal);
+
+  color: var(--teal);
+
+  font-size: 22px;
+
+  box-shadow: 0 0 35px rgba(39, 199, 192, 0.1);
+}
+
+.signal-label {
+  margin: 0 0 12px;
+
+  color: var(--teal);
+
+  font: 9px var(--mono);
+  letter-spacing: 0.16em;
+}
+
+.signal-success h3 {
+  margin: 0 0 16px;
+
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.signal-success > p:not(.signal-label) {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.signal-reset {
+  margin-top: 32px;
+
+  border: 0;
+  border-bottom: 1px solid var(--line);
+
+  padding: 0 0 8px;
+
+  background: transparent;
+
+  color: var(--paper);
+
+  font: 9px var(--mono);
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.signal-reset:hover {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.signal-form-sent {
+  border-color: rgba(39, 199, 192, 0.35);
+}
+
+@keyframes signalPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes signalTransmit {
+  0% {
+    width: 0%;
+    transform: translateX(0);
+  }
+
+  70% {
+    width: 75%;
+  }
+
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   SIGNAL — MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .contact-bottom {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .signal-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .signal-form {
+    padding: 20px;
+    min-height: 500px;
+  }
+
+  .signal-form-top {
+    font-size: 7px;
+  }
+
+  .signal-reasons {
+    gap: 6px;
+  }
+
+  .signal-reasons button {
+    font-size: 7px;
+    padding: 8px 9px;
+  }
+
+  .signal-field input,
+  .signal-field textarea {
+    font-size: 16px;
+  }
+
+  .signal-submit {
+    width: 100%;
+  }
+
+  .signal-success {
+    min-height: 450px;
+  }
+}

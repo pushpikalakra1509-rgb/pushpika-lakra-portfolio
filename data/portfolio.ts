@@ -39,7 +39,25 @@ export const softSkills = [
   { title: "Adaptability", note: "Learning to adjust when the original plan stops making sense." },
   { title: "Learning Mindset", note: "Curiosity first; depth comes from actually doing the work." },
 ];
-
+export const education = [
+  {
+    number: "01",
+    status: "CURRENT",
+    degree: "MSc",
+    field: "Artificial Intelligence & Data Science",
+    institution: "Indira University",
+    detail: "Currently pursuing",
+  },
+  {
+    number: "02",
+    status: "COMPLETED",
+    degree: "B.Sc.",
+    field: "Computer Science",
+    institution: "Christ College, Pune",
+    affiliation: "Affiliated with Savitribai Phule Pune University",
+    detail: "2023–2026 · CGPA: 9.27/10",
+  },
+];
 export const achievements = [
   {
     number: "01",

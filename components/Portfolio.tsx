@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   achievements,
   certifications,
+  education,
   project,
   softSkills,
   socialLinks,
@@ -19,9 +20,11 @@ import {
 } from "@/data/portfolio";
 
 const navItems = [
-  ["WORK", "work"],
   ["ABOUT", "about"],
   ["SKILLS", "skills"],
+  ["WORK", "work"],
+  ["CERTIFICATIONS", "certifications"],
+  ["EDUCATION", "education"],
   ["CONTACT", "contact"],
 ] as const;
 
@@ -408,7 +411,43 @@ function About() {
     </section>
   );
 }
+function Education() {
+  return (
+    <section className="section education-section" id="education">
+      <div className="section-index">06 / EDUCATION</div>
 
+      <div className="story-title">
+        <p className="micro">The foundation behind the work.</p>
+        <h2>
+          Learning with <span>purpose.</span>
+        </h2>
+      </div>
+
+      <div className="education-list">
+        {education.map((item) => (
+          <article className="education-row" key={item.number}>
+            <div className="education-number">{item.number}</div>
+
+            <div className="education-main">
+              <p className="micro">{item.status}</p>
+              <h3>{item.degree}</h3>
+              <h4>{item.field}</h4>
+              <p>{item.institution}</p>
+
+              {item.affiliation && (
+                <small>{item.affiliation}</small>
+              )}
+            </div>
+
+            <div className="education-detail">
+              {item.detail}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
 function Skills() {
   return (
     <section
@@ -783,59 +822,629 @@ function Certifications() {
     </section>
   );
 }
+function AskPushpika() {
+  const questions = [
+  {
+    question: "What is Pushpika currently studying?",
+    keywords: [
+      "study",
+      "studying",
+      "msc",
+      "master",
+      "masters",
+      "degree",
+      "university",
+      "current degree",
+    ],
+    answer:
+      "Pushpika is currently pursuing an MSc in Artificial Intelligence & Data Science at Indira University.",
+  },
 
-function Contact() {
+  {
+    question: "What did Pushpika study for her bachelor's?",
+    keywords: [
+      "bachelor",
+      "bachelors",
+      "bachelor's",
+      "bsc",
+      "computer science degree",
+      "undergraduate",
+      "college",
+      "christ college",
+      "cgpa",
+    ],
+    answer:
+      "Pushpika completed a B.Sc. in Computer Science from Christ College, Pune, affiliated with Savitribai Phule Pune University, with a CGPA of 9.27/10.",
+  },
+
+  {
+    question: "Tell me about CityPulse.",
+    keywords: [
+      "citypulse",
+      "traffic project",
+      "urban mobility",
+      "urban traffic",
+      "traffic analytics",
+      "traffic analysis",
+      "data project",
+      "streamlit project",
+    ],
+    answer:
+      "CityPulse is an end-to-end urban traffic analytics project built with Python, Pandas, SQL, statistical analysis, Plotly and Streamlit. It explores congestion patterns, rush hours, anomalies and junction-level traffic behaviour.",
+  },
+
+  {
+    question: "What are Pushpika's technical skills?",
+    keywords: [
+      "technical skills",
+      "technical",
+      "programming",
+      "programming languages",
+      "python",
+      "sql",
+      "machine learning",
+      "generative ai",
+      "power bi",
+      "data visualization",
+      "data analytics",
+      "artificial intelligence",
+    ],
+    answer:
+      "Her technical areas include Artificial Intelligence, Data & Analytics, Python, SQL, Generative AI, Machine Learning, Data Visualization, Power BI and Research.",
+  },
+
+  {
+    question: "What are Pushpika's soft skills?",
+    keywords: [
+      "soft skills",
+      "team management",
+      "communication",
+      "leadership",
+      "collaboration",
+      "organisation",
+      "organization",
+      "problem solving",
+      "adaptability",
+      "learning mindset",
+    ],
+    answer:
+      "Her soft skills include Team Management, Communication, Leadership, Collaboration, Organisation, Problem Solving, Adaptability and a strong Learning Mindset.",
+  },
+
+  {
+    question: "What leadership experience does Pushpika have?",
+    keywords: [
+      "leadership experience",
+      "leadership",
+      "science association",
+      "organising head",
+      "organizing head",
+      "event coordination",
+      "team management experience",
+    ],
+    answer:
+      "Pushpika served as Organising Head of her college Science Association, where she led and coordinated the organising team and developed experience in team management, communication, leadership and event coordination.",
+  },
+
+  {
+    question: "What practical experience does Pushpika have?",
+    keywords: [
+      "experience",
+      "practical experience",
+      "internship",
+      "training",
+      "evolvability",
+      "c programming",
+      "code reading",
+      "college project",
+    ],
+    answer:
+      "Her practical experience includes a 40-hour C Programming & Code Reading internship/training experience with Evolvability Tech Pvt. Ltd. in 2024, along with a three-month college project experience involving team-based practical work.",
+  },
+
+  {
+    question: "What certifications does Pushpika have?",
+    keywords: [
+      "certifications",
+      "certificates",
+      "certificate",
+      "ai certification",
+      "machine learning certification",
+      "generative ai certification",
+      "power bi certification",
+      "research certification",
+    ],
+    answer:
+      "Her certifications and training include AI–Machine Learning Engineer Foundation, Getting Started with Generative AI from IBM SkillsBuild, Create Image Captioning Models, Power BI for Beginners, Research Methodology for Computer Science, Red Hat Java EE, Business Email, Graphic Design Essentials, Canva's Visual Suite, and C Programming & Code Reading.",
+  },
+
+  {
+    question: "What is Pushpika currently exploring?",
+    keywords: [
+      "exploring",
+      "currently learning",
+      "learning",
+      "interests",
+      "career interests",
+      "future",
+      "what is she interested in",
+    ],
+    answer:
+      "She is currently exploring AI, data science, generative AI and practical ways to turn technical ideas into useful projects.",
+  },
+
+  {
+    question: "How can I contact Pushpika?",
+    keywords: [
+      "contact",
+      "email",
+      "linkedin",
+      "github",
+      "connect",
+      "reach",
+      "message",
+    ],
+    answer:
+      "You can connect with Pushpika through LinkedIn, GitHub or email. Her contact links are available in the Contact section of this portfolio.",
+  },
+];
+  const [activeQuestion, setActiveQuestion] = useState(0);
+  const [input, setInput] = useState("");
+
+  const handleAsk = () => {
+  const query = input.trim().toLowerCase();
+
+  if (!query) return;
+
+  const normalizedQuery = query
+    .replace(/[?!.,]/g, "")
+    .replace(/\s+/g, " ");
+
+  const matchIndex = questions.findIndex((item) =>
+    item.keywords.some((keyword) =>
+      normalizedQuery.includes(keyword.toLowerCase())
+    )
+  );
+
+  if (matchIndex !== -1) {
+    setActiveQuestion(matchIndex);
+  }
+
+  setInput("");
+};
   return (
-    <section
-      className="section contact"
-      id="contact"
-    >
-      <div
-        className="contact-glow"
-        aria-hidden="true"
-      />
-
+    <section className="section ask-pushpika" id="ask-pushpika">
       <div className="section-index">
-        06 / CONTACT
+        07 / ASK PUSHPIKA
       </div>
 
-      <p className="micro">
-        Open to conversations, collaborations
-        &amp; opportunities.
-      </p>
+      <p className="micro">A SMALL PORTFOLIO ASSISTANT</p>
 
-      <h2>
-        Let&apos;s make the
-        <br />
-        <span>next  thing.</span>
-      </h2>
+      <div className="ask-layout">
+        <div>
+          <h2>
+            Ask
+            <br />
+            <span>Pushpika.</span>
+          </h2>
 
-      <div className="contact-bottom">
-        <p>
-          The portfolio is a work in progress —
-          just like the person behind it. For
-          conversations about AI, data and
-          building, find me here.
-        </p>
+          <p className="ask-intro">
+            Ask about my work, skills, education or what I&apos;m currently
+            exploring.
+          </p>
+        </div>
 
-        <div className="socials">
-          <MagneticLink href={socialLinks.linkedin}>
-            LINKEDIN ↗
-          </MagneticLink>
+        <div className="ask-card">
+          <div className="ask-card-top">
+            <span>PORTFOLIO / AI ASSISTANT</span>
+            <span>● ONLINE</span>
+          </div>
 
-          <MagneticLink href={socialLinks.github}>
-            GITHUB ↗
-          </MagneticLink>
+          <div className="ask-answer">
+            <p className="ask-label">PUSHPika&apos;S ASSISTANT</p>
 
-          <MagneticLink href={socialLinks.email}>
-            EMAIL ↗
-          </MagneticLink>
+            <p className="ask-user-question">
+              {questions[activeQuestion].question}
+            </p>
+
+            <p className="ask-response">
+              {questions[activeQuestion].answer}
+            </p>
+          </div>
+
+          <div className="ask-input-row">
+            <input
+              type="text"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  handleAsk();
+                }
+              }}
+              placeholder="Ask about Pushpika, her work, skills or projects..."
+              aria-label="Ask something about Pushpika"
+            />
+
+            <button type="button" onClick={handleAsk}>
+              ASK ↗
+            </button>
+          </div>
+
+          <div className="ask-questions">
+            {questions.slice(0, 5).map((item, index) =>  (
+              <button
+                key={item.question}
+                type="button"
+                className={activeQuestion === index ? "active" : ""}
+                onClick={() => setActiveQuestion(index)}
+              >
+                <span>0{index + 1}</span>
+                {item.question}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
+function HowIBuiltThis() {
+  const buildSteps = [
+    {
+      number: "01",
+      title: "IDEA",
+      text: "I wanted the portfolio to feel more like an interactive experience than a traditional resume page.",
+    },
+    {
+      number: "02",
+      title: "DESIGN",
+      text: "The visual direction combines an editorial layout, cinematic typography, dark surfaces and subtle motion.",
+    },
+    {
+      number: "03",
+      title: "BUILD",
+      text: "Built with Next.js, TypeScript, React and CSS, with reusable components for the main portfolio sections.",
+    },
+    {
+      number: "04",
+      title: "AI-ASSISTED",
+      text: "AI was used as a development collaborator for generating ideas, code, debugging and iterating on the interface.",
+    },
+    {
+      number: "05",
+      title: "ITERATE",
+      text: "The portfolio was repeatedly tested and adjusted, especially for responsive behaviour and mobile layouts.",
+    },
+    {
+      number: "06",
+      title: "DEPLOY",
+      text: "The final site is deployed through GitHub Pages with an automated GitHub Actions workflow.",
+    },
+  ];
 
+  return (
+    <section className="section build-section" id="how-i-built-this">
+      <div className="section-index">
+        07 / HOW I BUILT THIS
+      </div>
+
+      <div className="build-heading">
+        <div>
+          <p className="micro">THE PROCESS BEHIND THE PORTFOLIO</p>
+
+          <h2>
+            Built,
+            <br />
+            <span>not just designed.</span>
+          </h2>
+        </div>
+
+        <p className="build-intro">
+          This portfolio is also an experiment in learning by building —
+          using technology, iteration and AI as part of the process.
+        </p>
+      </div>
+
+      <div className="build-grid">
+        {buildSteps.map((step) => (
+          <article className="build-card" key={step.number}>
+            <span className="build-number">{step.number}</span>
+
+            <h3>{step.title}</h3>
+
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+
+      <div className="build-stack">
+        <span>STACK</span>
+
+        <div>
+          <b>Next.js</b>
+          <b>React</b>
+          <b>TypeScript</b>
+          <b>CSS</b>
+          <b>GitHub</b>
+          <b>GitHub Pages</b>
+          <b>AI-assisted development</b>
+        </div>
+      </div>
+    </section>
+  );
+}
+function FloatingAskButton() {
+  return (
+    <a
+      href="#ask-pushpika"
+      className="floating-ask-button"
+      aria-label="Ask Pushpika"
+    >
+      ASK PUSHPIKA <span>↗</span>
+    </a>
+  );
+}
+function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [reason, setReason] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [status, setStatus] = useState<
+    "idle" | "transmitting" | "sent"
+  >("idle");
+
+  const handleTransmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!name.trim() || !email.trim() || !message.trim()) {
+    return;
+  }
+
+  setStatus("transmitting");
+
+  try {
+    const response = await fetch(
+      "https://formspree.io/f/mwlpqybl",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          reason,
+          message,
+        }),
+      }
+    );
+
+    if (response.ok) {
+      setStatus("sent");
+    } else {
+      setStatus("idle");
+      alert("Something went wrong. Please try again.");
+    }
+  } catch {
+    setStatus("idle");
+    alert("Unable to transmit signal. Please try again.");
+  }
+};
+
+  return (
+    <section className="section contact" id="contact">
+      <div className="contact-glow" aria-hidden="true" />
+
+      <div className="section-index">
+        08 / CONTACT
+      </div>
+
+      <p className="micro">
+        Open to conversations, collaborations &amp; opportunities.
+      </p>
+
+      <h2>
+        Let&apos;s make the
+        <br />
+        <span>next thing.</span>
+      </h2>
+
+      <div className="contact-bottom">
+        <div className="contact-message">
+          <p>
+            Have a project idea, opportunity, question or simply want to
+            connect?
+          </p>
+
+          <div className="signal-status">
+            <span className="signal-dot" />
+            DIRECT CHANNEL AVAILABLE
+          </div>
+
+          <div className="socials">
+            <div className="social-item">
+              <span>LINKEDIN</span>
+              <MagneticLink href={socialLinks.linkedin}>
+                linkedin.com/in/pushpika-lakra-022079374 ↗
+              </MagneticLink>
+            </div>
+
+            <div className="social-item">
+              <span>EMAIL</span>
+              <MagneticLink href={socialLinks.email}>
+                pushpikalakra1509@gmail.com ↗
+              </MagneticLink>
+            </div>
+
+            <div className="social-item">
+              <span>GITHUB</span>
+              <MagneticLink href={socialLinks.github}>
+                github.com/pushpikalakra1509-rgb ↗
+              </MagneticLink>
+            </div>
+          </div>
+        </div>
+
+        <form
+          className={`signal-form ${
+            status === "sent" ? "signal-form-sent" : ""
+          }`}
+          onSubmit={handleTransmit}
+        >
+          {status === "sent" ? (
+            <div className="signal-success">
+              <div className="signal-success-icon">
+                ✓
+              </div>
+
+              <p className="signal-label">
+                SIGNAL RECEIVED
+              </p>
+
+              <h3>
+                Message transmitted.
+              </h3>
+
+              <p>
+                Your message has been prepared for Pushpika.
+                Thank you for reaching out.
+              </p>
+
+              <button
+                type="button"
+                className="signal-reset"
+                onClick={() => {
+                  setStatus("idle");
+                  setName("");
+                  setEmail("");
+                  setReason("");
+                  setMessage("");
+                }}
+              >
+                SEND ANOTHER ↗
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="signal-form-top">
+                <span>DIRECT CHANNEL</span>
+
+                <span>
+                  {status === "transmitting"
+                    ? "● TRANSMITTING"
+                    : "● READY"}
+                </span>
+              </div>
+
+              <div className="signal-field">
+                <label htmlFor="signal-name">
+                  YOUR NAME
+                </label>
+
+                <input
+                  id="signal-name"
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  required
+                  disabled={status === "transmitting"}
+                />
+              </div>
+
+              <div className="signal-field">
+                <label htmlFor="signal-email">
+                  YOUR EMAIL
+                </label>
+
+                <input
+                  id="signal-email"
+                  name="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  required
+                  disabled={status === "transmitting"}
+                />
+              </div>
+
+              <div className="signal-field">
+                <label>
+                  WHAT IS THIS ABOUT?
+                </label>
+
+                <div className="signal-reasons">
+                  {[
+                    "INTERNSHIP",
+                    "PROJECT",
+                    "COLLABORATION",
+                    "OTHER",
+                  ].map((item) => (
+                    <button
+                      key={item}
+                      type="button"
+                      className={
+                        reason === item
+                          ? "active"
+                          : ""
+                      }
+                      onClick={() => setReason(item)}
+                      disabled={
+                        status === "transmitting"
+                      }
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="signal-field">
+                <label htmlFor="signal-message">
+                  MESSAGE
+                </label>
+
+                <textarea
+                  id="signal-message"
+                  name="message"
+                  value={message}
+                  onChange={(e) =>
+                    setMessage(e.target.value)
+                  }
+                  placeholder="Tell me what’s on your mind..."
+                  rows={5}
+                  required
+                  disabled={status === "transmitting"}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="signal-submit"
+                disabled={status === "transmitting"}
+              >
+                {status === "transmitting"
+                  ? "TRANSMITTING..."
+                  : "TRANSMIT ↗"}
+              </button>
+
+              {status === "transmitting" && (
+                <div className="signal-progress">
+                  <span />
+                </div>
+              )}
+            </>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
 
@@ -860,13 +1469,16 @@ export default function Portfolio() {
       <Nav />
 
       <main>
+        <FloatingAskButton />
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Achievements />
         <Certifications />
-
+        <Education/>
+        <AskPushpika/>
+        <HowIBuiltThis />
         <section className="statement-section">
           <Reveal>
             <p>
